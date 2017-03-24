@@ -1,6 +1,7 @@
 terragrunt = {
     terraform {
-        source = "../../../../modules/data-storage/mysql"
+        # using tag of local repo as a version number
+        source = "git::../../../../modules//data-storage/mysql?ref=v1.0.0"
     }
     include {
         path = "${find_in_parent_folders()}"

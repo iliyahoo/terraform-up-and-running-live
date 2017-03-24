@@ -1,6 +1,7 @@
 terragrunt = {
     terraform {
-        source = "../../../../modules/services/webserver-cluster"
+        # using tag of local repo as a version number
+        source = "git::../../../../modules//services/webserver-cluster?ref=v1.0.0"
     }
     include {
         path = "${find_in_parent_folders()}"

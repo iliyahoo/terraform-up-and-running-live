@@ -1,6 +1,7 @@
 terragrunt = {
     terraform {
-        source = "../../../modules/vpc"
+        # using tag of local repo as a version number
+        source = "git::../../../modules//vpc?ref=v1.0.0"
     }
     include {
         path = "${find_in_parent_folders()}"
